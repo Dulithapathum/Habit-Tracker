@@ -1,3 +1,7 @@
+import React, { useState } from "react"; // React and useState hook
+import { useDispatch } from "react-redux"; // Hook to dispatch actions
+import { AppDispatch } from "../Store/Store"; // Type for dispatch
+import { addHabit } from "../Store/habitSlice"; // Action to add a habit
 import {
   Box,
   Button,
@@ -6,31 +10,29 @@ import {
   MenuItem,
   Select,
   TextField,
-} from "@mui/material";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "../Store/Store";
-import { addHabit } from "../Store/habitSlice";
+} from "@mui/material"; // Material UI components
 
 const AddHabitForm: React.FC = () => {
-  const [name, setName] = useState<string>("");
-  const [frequency, setFrequency] = useState<"daily" | "weekly">("daily");
-  const dispatch = useDispatch<AppDispatch>();
+  const [name, setName] = useState<string>(""); // State for habit name
+  const [frequency, setFrequency] = useState<"daily" | "weekly">("daily"); // State for frequency
+  const dispatch = useDispatch<AppDispatch>(); // Dispatch function
+
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevents default form submission
     if (name.trim()) {
-      dispatch(addHabit({ name, frequency }));
-      setName("");
+      dispatch(addHabit({ name, frequency })); // Dispatches addHabit action
+      setName(""); // Resets the name input
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      {" "}
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
         <TextField
           label="Habit Name"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setName(e.target.value)} // Updates name state
           placeholder="Enter Habit Name"
           fullWidth
         />
@@ -38,7 +40,7 @@ const AddHabitForm: React.FC = () => {
           <InputLabel>Frequency</InputLabel>
           <Select
             value={frequency}
-            onChange={(e) => setFrequency(e.target.value as "daily" | "weekly")}
+            onChange={(e) => setFrequency(e.target.value as "daily" | "weekly")} // Updates frequency state
           >
             <MenuItem value="daily">Daily</MenuItem>
             <MenuItem value="weekly">Weekly</MenuItem>
@@ -52,4 +54,4 @@ const AddHabitForm: React.FC = () => {
   );
 };
 
-export default AddHabitForm;
+export default AddHabitForm; // Exports the AddHabitForm component

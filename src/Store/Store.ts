@@ -1,12 +1,14 @@
-import { configureStore } from "@reduxjs/toolkit";
-import habitsReducer from "./habitSlice";
-const store = configureStore({
+// src/Store/Store.ts
+import { configureStore } from "@reduxjs/toolkit"; // Redux Toolkit import
+import habitsReducer from "../Store/habitSlice"; // Reducer for habits
+
+const store = configureStore({ // Configures the Redux store
   reducer: {
-    habits: habitsReducer,
+    habits: habitsReducer, // Adds habits reducer
   },
 });
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>; // Type for root state
+export type AppDispatch = typeof store.dispatch; // Type for dispatch
 
-export default store;
+export default store; // Exports the store
