@@ -1,12 +1,13 @@
-import { useSelector } from "react-redux";
-import { RootState } from "../Store/Store";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../Store/Store";
 import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import { toggleHabit } from "../Store/habitSlice";
 const HabitList: React.FC = () => {
   const { habits } = useSelector((state: RootState) => state.habits);
   const today = new Date().toISOString().split("T")[0];
-
+  const dispatch = useDispatch<AppDispatch>();
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 4 }}>
       {habits.length === 0 ? (
@@ -37,6 +38,9 @@ const HabitList: React.FC = () => {
                         : "primary"
                     }
                     startIcon={<CheckCircleOutlineIcon />}
+                    onClick={() => {
+                      dispatch(toggleHabit({ id: habit.id, date: today }));
+                    }}
                   >
                     {habit.completedDates.includes(today)
                       ? "Completed"
