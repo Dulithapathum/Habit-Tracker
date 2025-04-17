@@ -3,30 +3,37 @@
 ![screencapture-localhost-5173-2025-01-28-18_21_36](https://github.com/user-attachments/assets/45eca7c8-33c0-47bc-bcc8-a443a0d2648a)
 
 ## Description
+
 Habit Tracker is a web application built with React, TypeScript, and Redux Toolkit. It allows users to track their habits, set goals, and visualize their progress over time. The application provides a user-friendly interface with Material UI components.
 
 ## Features
-- Add, remove, and toggle habits
-- View statistics on habits
-- Track streaks for daily and weekly habits
-- Responsive design for mobile and desktop
+
+✅ Add, remove, and toggle habits
+📅 Track daily and weekly completions
+📈 View streaks and progress over time
+📊 Statistics and visual insights (coming soon)
+📱 Fully responsive for mobile and desktop
+💾 Data persists with localStorage
 
 ## Installation
 
 To get started with the Habit Tracker, follow these steps:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/Dulithapathum/Habit-Tracker
    cd habit-tracker
    ```
 
 2. Install the dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -36,9 +43,12 @@ To get started with the Habit Tracker, follow these steps:
 ## Usage
 
 Once the application is running, you can:
-- Add new habits using the form provided.
-- View your habits in a list format.
-- Track your progress and see your streaks.
+
+➕ Add a new habit by providing its name and frequency
+✅ Mark a habit as completed for the day/week
+🔁 Toggle completion state by clicking the checkbox
+❌ Delete a habit if it's no longer needed
+📆 View all habits with created dates and progress
 
 ## Contributing
 
