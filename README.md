@@ -1,5 +1,7 @@
 # Habit Tracker
 
+![screencapture-localhost-5173-2025-01-28-18_21_36](https://github.com/user-attachments/assets/45eca7c8-33c0-47bc-bcc8-a443a0d2648a)
+
 ## Description
 Habit Tracker is a web application built with React, TypeScript, and Redux Toolkit. It allows users to track their habits, set goals, and visualize their progress over time. The application provides a user-friendly interface with Material UI components.
 
