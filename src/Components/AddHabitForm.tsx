@@ -1,7 +1,6 @@
 import React, { useState } from "react"; // React and useState hook
 import { useDispatch } from "react-redux"; // Hook to dispatch actions
 import { AppDispatch } from "../Store/Store"; // Type for dispatch
-import { addHabit } from "../Store/habitSlice"; // Action to add a habit
 import {
   Box,
   Button,
@@ -11,6 +10,7 @@ import {
   Select,
   TextField,
 } from "@mui/material"; // Material UI components
+import { addHabit } from "../Store/habitSlice"; // Action to add a habit
 
 const AddHabitForm: React.FC = () => {
   const [name, setName] = useState<string>(""); // State for habit name
