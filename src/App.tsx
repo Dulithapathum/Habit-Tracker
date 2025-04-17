@@ -5,6 +5,7 @@ import { Container, Typography } from "@mui/material"; // Material UI components
 import AddHabitForm from "./Components/AddHabitForm"; // Component to add new habits
 import HabitList from "./Components/HabitList"; // Component to display the list of habits
 import HabitsStats from "./Components/HabitsStats"; // Component to show statistics about habits
+import { Pix } from "@mui/icons-material";
 
 const App = () => {
   return (
