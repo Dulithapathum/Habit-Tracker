@@ -8,12 +8,12 @@ Habit Tracker is a web application built with React, TypeScript, and Redux Toolk
 
 ## Features
 
-✅ Add, remove, and toggle habits
-📅 Track daily and weekly completions
-📈 View streaks and progress over time
-📊 Statistics and visual insights (coming soon)
-📱 Fully responsive for mobile and desktop
-💾 Data persists with localStorage
+- ✅ Add, remove, and toggle habits
+- 📅 Track daily and weekly completions
+- 📈 View streaks and progress over time
+- 📊 Statistics and visual insights (coming soon)
+- 📱 Fully responsive for mobile and desktop
+- 💾 Data persists with localStorage
 
 ## Installation
 
@@ -44,11 +44,11 @@ To get started with the Habit Tracker, follow these steps:
 
 Once the application is running, you can:
 
-➕ Add a new habit by providing its name and frequency
-✅ Mark a habit as completed for the day/week
-🔁 Toggle completion state by clicking the checkbox
-❌ Delete a habit if it's no longer needed
-📆 View all habits with created dates and progress
+- ➕ Add a new habit by providing its name and frequency
+- ✅ Mark a habit as completed for the day/week
+- 🔁 Toggle completion state by clicking the checkbox
+- ❌ Delete a habit if it's no longer needed
+- 📆 View all habits with created dates and progress
 
 ## Contributing
 
