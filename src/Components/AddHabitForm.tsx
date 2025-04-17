@@ -10,7 +10,7 @@ import {
   Select,
   TextField,
 } from "@mui/material"; // Material UI components
-import { addHabit } from "../Store/habitSlice";
+import { addHabit } from "../Store/HabitSlice";
 
 const AddHabitForm: React.FC = () => {
   const [name, setName] = useState<string>(""); // State for habit name

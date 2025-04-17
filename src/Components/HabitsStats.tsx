@@ -2,7 +2,7 @@ import React, { useEffect } from "react"; // React and useEffect hook
 import { useDispatch, useSelector } from "react-redux"; // Hooks for state and dispatch
 import { AppDispatch, RootState } from "../Store/Store"; // Types for dispatch and state
 import { LinearProgress, Paper, Typography } from "@mui/material"; // Material UI components
-import { fetchHabits } from "../Store/habitSlice";
+import { fetchHabits } from "../Store/HabitSlice";
 
 const HabitsStats: React.FC = () => {
   const { habits, isLoading, error } = useSelector(

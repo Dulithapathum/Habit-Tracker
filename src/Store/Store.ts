@@ -1,8 +1,9 @@
 // src/Store/Store.ts
 import { configureStore } from "@reduxjs/toolkit"; // Redux Toolkit import
-import habitsReducer from "./habitSlice"; // Reducer for habits
+import habitsReducer from "./HabitSlice"; // Reducer for habits
 
-const store = configureStore({ // Configures the Redux store
+const store = configureStore({
+  // Configures the Redux store
   reducer: {
     habits: habitsReducer, // Adds habits reducer
   },

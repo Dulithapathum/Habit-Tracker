@@ -11,7 +11,7 @@ import {
 } from "@mui/material"; // Material UI components
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline"; // Icon for completed habit
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline"; // Icon for deleting habit
-import { Habit, removeHabit, toggleHabit } from "../Store/habitSlice";
+import { Habit, removeHabit, toggleHabit } from "../Store/HabitSlice";
 
 const HabitList: React.FC = () => {
   const { habits } = useSelector((state: RootState) => state.habits); // Selects habits from state
